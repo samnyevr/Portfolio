@@ -1,0 +1,172 @@
+.App {
+    background: #000014;
+}
+
+nav {
+    position: absolute;
+    max-height: 10vh;
+    max-width: 50%;
+    color: #ddefff;
+
+    img {
+        width: 10%;
+        position: relative;
+        left: 5vw;
+        top: 5vw;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    ul {
+        position: relative;
+        float: right;
+        top: 15vh;
+        right: 13vw;
+    }
+
+    a {
+        padding: 0px 2vw;
+    }
+}
+
+.Home {
+    height: 100vh;
+    max-width: 100vw;
+    //background: url("Logo3.svg") no-repeat center center fixed;
+
+    .description-1 {
+        position: relative;
+        top: 52%;
+        left: 15%;
+        color: #ddefff;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 56px;
+    }
+
+    .description-2 {
+        position: relative;
+        top: 52%;
+        left: 15%;
+        color: #ddefff;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 56px;
+    }
+
+    .ellipse-1 {
+        position: absolute;
+        display: grid;
+        top: 28%;
+        left: 10%;
+        width: 600px;
+        height: 600px;
+        max-width: 35%;
+        max-height: 60%;
+        border-radius: 50%;
+        box-shadow: inset 5px -1px 5px -2px #7293fb;
+        //border: 3px solid #7293fb;
+        border-left: 0px;
+        border-right: 1px solid #000;
+    }
+
+    .ellipse-2 {
+        position: absolute;
+        display: grid;
+        top: 28%;
+        left: 10%;
+        width: 600px;
+        height: 600px;
+        max-width: 35%;
+        max-height: 60%;
+        border-radius: 50%;
+        box-shadow: inset -1px 5px 5px -6px #7293fb;
+        //border: 3px solid #7293fb;
+        border-left: 0px;
+        border-right: 1px solid #000;
+    }
+
+    .ellipse-3 {
+        position: absolute;
+        display: grid;
+        top: 28%;
+        left: 55%;
+        width: 600px;
+        height: 600px;
+        max-width: 35%;
+        max-height: 60%;
+        border-radius: 50%;
+        box-shadow: inset -5px 1px 5px -2px #7293fb;
+        //border: 3px solid #7293fb;
+        border-left: 0px;
+        border-right: 1px solid #000;
+    }
+
+    .ellipse-4 {
+        position: absolute;
+        display: grid;
+        top: 28%;
+        left: 55%;
+        width: 600px;
+        height: 600px;
+        max-width: 35%;
+        max-height: 60%;
+        border-radius: 50%;
+        box-shadow: inset 1px -5px 5px -6px #7293fb;
+        //border: 3px solid #7293fb;
+        border-left: 0px;
+        border-right: 1px solid #000;
+    }
+
+    Button {
+        position: relative;
+        top: 20%;
+        left: 55%;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+            0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    Button:hover {
+    }
+
+    Button:active {
+        border: none;
+        outline: none;
+    }
+
+    .work {
+        position: relative;
+        display: flex;
+        top: 33%;
+        left: 65%;
+        font-size: 20px;
+        padding: 15px;
+        background: #000014;
+        border: 2px solid #097ca4;
+        color: #fff;
+        width: 170px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contact {
+        position: relative;
+        display: flex;
+        top: 42%;
+        left: 65%;
+        font-size: 20px;
+        padding: 15px;
+        background: #097ca4;
+        color: #fff;
+        width: 170px;
+        text-align: center;
+        justify-content: center;
+    }
+}
