@@ -1,172 +1,142 @@
+$TextColor: #ddefff;
+
+@font-face {
+    font-family: Slant;
+    src: url(./Fonts/FaxineSky.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $TextColor;
+    font-family: Slant;
+}
 .App {
     background: #000014;
 }
 
 nav {
-    position: absolute;
-    max-height: 10vh;
-    max-width: 50%;
-    color: #ddefff;
+    position: fixed;
+    width: 100%;
+    margin: 0px 100px;
+    color: $TextColor;
+    display: flex;
+    z-index: 10;
 
-    img {
-        width: 10%;
-        position: relative;
-        left: 5vw;
-        top: 5vw;
-        max-width: 100px;
-        max-height: 100px;
+    .Logo {
+        margin-top: 50px;
+
+        img {
+            width: 60px;
+            max-width: 100%;
+            height: 100%;
+        }
     }
 
-    ul {
-        position: relative;
-        float: right;
-        top: 15vh;
-        right: 13vw;
-    }
+    .Menu {
+        width: 500px;
+        margin-left: 600px;
+        margin-right: 100px;
+        text-align: bottom;
+        align-self: flex-end;
+        .ScrollLink {
+            margin-right: 80px;
 
-    a {
-        padding: 0px 2vw;
+            h5 {
+                display: inline;
+                font-size: 25px;
+            }
+        }
     }
 }
 
 .Home {
+    width: 100%;
     height: 100vh;
-    max-width: 100vw;
-    //background: url("Logo3.svg") no-repeat center center fixed;
+    display: flex;
 
-    .description-1 {
-        position: relative;
-        top: 52%;
-        left: 15%;
-        color: #ddefff;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 40px;
-        line-height: 56px;
+    span {
+        font-size: 60px;
+        align-self: center;
+        justify-self: center;
+        margin-left: 100px;
+        width: 65%;
+
+        h1 {
+            font-size: 50px;
+        }
     }
 
-    .description-2 {
-        position: relative;
-        top: 52%;
-        left: 15%;
-        color: #ddefff;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 56px;
+    .buttons {
+        align-self: center;
+        justify-self: center;
+        width: auto;
+
+        button {
+            border-radius: 10px;
+            border: none;
+            color: black;
+            width: 150px;
+            padding: 10px;
+            font-size: 16px;
+            display: block;
+            margin: 100px 0px;
+
+            background-color: black;
+            color: white;
+        }
+
+        .work {
+            border: 4px solid $TextColor;
+        }
+
+        .contact {
+            border: 4px solid $TextColor;
+            background: $TextColor;
+            color: #000014;
+        }
+    }
+}
+
+.Project {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+
+    .left {
+        margin-top: 200px;
+        margin-left: 100px;
+        font-size: 50px;
+        width: 20%;
     }
 
-    .ellipse-1 {
-        position: absolute;
-        display: grid;
-        top: 28%;
-        left: 10%;
-        width: 600px;
-        height: 600px;
-        max-width: 35%;
-        max-height: 60%;
-        border-radius: 50%;
-        box-shadow: inset 5px -1px 5px -2px #7293fb;
-        //border: 3px solid #7293fb;
-        border-left: 0px;
-        border-right: 1px solid #000;
-    }
-
-    .ellipse-2 {
-        position: absolute;
-        display: grid;
-        top: 28%;
-        left: 10%;
-        width: 600px;
-        height: 600px;
-        max-width: 35%;
-        max-height: 60%;
-        border-radius: 50%;
-        box-shadow: inset -1px 5px 5px -6px #7293fb;
-        //border: 3px solid #7293fb;
-        border-left: 0px;
-        border-right: 1px solid #000;
-    }
-
-    .ellipse-3 {
-        position: absolute;
-        display: grid;
-        top: 28%;
-        left: 55%;
-        width: 600px;
-        height: 600px;
-        max-width: 35%;
-        max-height: 60%;
-        border-radius: 50%;
-        box-shadow: inset -5px 1px 5px -2px #7293fb;
-        //border: 3px solid #7293fb;
-        border-left: 0px;
-        border-right: 1px solid #000;
-    }
-
-    .ellipse-4 {
-        position: absolute;
-        display: grid;
-        top: 28%;
-        left: 55%;
-        width: 600px;
-        height: 600px;
-        max-width: 35%;
-        max-height: 60%;
-        border-radius: 50%;
-        box-shadow: inset 1px -5px 5px -6px #7293fb;
-        //border: 3px solid #7293fb;
-        border-left: 0px;
-        border-right: 1px solid #000;
-    }
-
-    Button {
-        position: relative;
-        top: 20%;
-        left: 55%;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-            0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    Button:hover {
-    }
-
-    Button:active {
-        border: none;
-        outline: none;
-    }
-
-    .work {
-        position: relative;
+    .right {
+        width: 70%;
         display: flex;
-        top: 33%;
-        left: 65%;
-        font-size: 20px;
-        padding: 15px;
-        background: #000014;
-        border: 2px solid #097ca4;
-        color: #fff;
-        width: 170px;
-        text-align: center;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-content: stretch;
     }
 
-    .contact {
-        position: relative;
-        display: flex;
-        top: 42%;
-        left: 65%;
-        font-size: 20px;
-        padding: 15px;
-        background: #097ca4;
-        color: #fff;
-        width: 170px;
-        text-align: center;
-        justify-content: center;
+    card {
+        flex-grow: 1;
+        margin: 20px;
+        margin-top: 50px;
+        align-self: center;
+        justify-self: center;
+        border: 5px solid $TextColor;
+        height: 500px;
     }
+}
+
+.About {
+    width: 100%;
+    height: 100vh;
+}
+
+.Contact {
+    width: 100%;
+    height: 100vh;
 }

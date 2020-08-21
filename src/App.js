@@ -11,8 +11,8 @@ import "./App.css";
 function App() {
     return (
         <Router>
-            <div className="App">
-                <Navbar />
+            <body className="App">
+                <Navbar style={{ position: "absolute" }} />
                 {/* <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/project" component={Project} />
@@ -23,7 +23,7 @@ function App() {
                 <Project />
                 <About />
                 <Contact />
-            </div>
+            </body>
         </Router>
     );
 }

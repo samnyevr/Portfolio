@@ -1,18 +1,17 @@
 import React from "react";
-import Logo from "../Logo3.svg";
+import Logo from "../Logo 3 white small.svg";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
-    const navStyle = {
-        color: "white",
-    };
-
     return (
-        <nav>
-            <img src={Logo} className="Logo" alt="" />
-            <ul className="NavbarList">
+        <nav className="Nav" id="nav">
+            <div className="Logo">
+                <img src={Logo} alt="" />
+            </div>
+            <div className="Menu">
                 <ScrollLink
+                    className="ScrollLink"
                     activeClass="active"
                     to="home"
                     spy={true}
@@ -20,9 +19,11 @@ const Navbar = () => {
                     offset={0}
                     duration={500}
                 >
-                    Home
+                    <h5>Home</h5>
                 </ScrollLink>
+
                 <ScrollLink
+                    className="ScrollLink"
                     activeClass="active"
                     to="project"
                     spy={true}
@@ -30,9 +31,11 @@ const Navbar = () => {
                     offset={0}
                     duration={500}
                 >
-                    Project
+                    <h5>Project</h5>
                 </ScrollLink>
+
                 <ScrollLink
+                    className="ScrollLink"
                     activeClass="active"
                     to="about"
                     spy={true}
@@ -40,9 +43,11 @@ const Navbar = () => {
                     offset={0}
                     duration={500}
                 >
-                    About
+                    <h5>About</h5>
                 </ScrollLink>
+
                 <ScrollLink
+                    className="ScrollLink"
                     activeClass="active"
                     to="contact"
                     spy={true}
@@ -50,9 +55,9 @@ const Navbar = () => {
                     offset={0}
                     duration={500}
                 >
-                    Contact
+                    <h5>Contact</h5>
                 </ScrollLink>
-            </ul>
+            </div>
         </nav>
     );
 };
