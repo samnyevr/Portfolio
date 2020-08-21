@@ -6,25 +6,17 @@ import Project from "./Components/Project";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 
-import "./App.css";
+import "./css/Main.css";
 
 function App() {
     return (
-        <Router>
-            <body className="App">
-                <Navbar style={{ position: "absolute" }} />
-                {/* <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/project" component={Project} />
-                    <Route path="/about" component={About} />
-                    <Route path="/contact" component={Contact} />
-                </Switch> */}
-                <Home />
-                <Project />
-                <About />
-                <Contact />
-            </body>
-        </Router>
+        <body className="App">
+            <Navbar />
+            <Home />
+            <Project />
+            <About />
+            <Contact />
+        </body>
     );
 }
 

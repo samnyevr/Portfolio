@@ -1,6 +1,5 @@
 import React from "react";
-import Logo from "../Logo 3 white small.svg";
-import { Link as RouterLink } from "react-router-dom";
+import Logo from "../images/Logo 3 white small.svg";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {

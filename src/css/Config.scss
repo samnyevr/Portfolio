@@ -1,0 +1,55 @@
+$PrimearyColor: #ddefff;
+$BackgroundColor: #000014;
+
+// font family
+@font-face {
+    font-family: FaxineSky;
+    src: url(../Fonts/FaxineSky.ttf);
+}
+
+@mixin pageSetup {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+
+    .left {
+        margin-top: 200px;
+        margin-left: 100px;
+        font-size: 50px;
+        width: 20%;
+    }
+
+    .right {
+        margin-top: 200px;
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-content: stretch;
+    }
+}
+
+// media query mixin
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
