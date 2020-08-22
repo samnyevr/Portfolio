@@ -1,6 +1,29 @@
 @font-face {
-  font-family: FaxineSky;
+  font-family: "FaxineSky";
   src: url(../Fonts/FaxineSky.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyItalic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
 }
 
 * {
@@ -29,7 +52,7 @@ nav .Logo {
 }
 
 nav .Logo img {
-  width: 60px;
+  width: 4rem;
   max-width: 100%;
   height: 100%;
 }
@@ -54,53 +77,77 @@ nav .Menu .ScrollLink h5 {
   font-size: 25px;
 }
 
+nav .Menu .ScrollLink h5:hover {
+  text-decoration: underline;
+}
+
 .Home {
   width: 100%;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.Home span {
-  font-size: 60px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  margin-left: 100px;
-  width: 65%;
+.Home .desc {
+  font-size: 2.5rem;
+  margin: 10rem 10rem 5rem 10rem;
+  line-height: 5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
 }
 
-.Home span h1 {
-  font-size: 50px;
+.Home .desc span {
+  display: block;
 }
 
-.Home .buttons {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  width: auto;
+.Home .desc h2 {
+  display: inline;
+}
+
+.Home .desc .myName {
+  -webkit-animation: glow 2500ms linear infinite 2000ms;
+          animation: glow 2500ms linear infinite 2000ms;
+  font-weight: bold;
+  font-size: 3em;
+  display: inline;
+}
+
+@-webkit-keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
 }
 
 .Home .buttons button {
+  padding: 1rem 0;
   border-radius: 10px;
-  border: none;
-  color: black;
-  width: 150px;
-  padding: 10px;
-  font-size: 16px;
-  display: block;
-  margin: 100px 0px;
-  background-color: #000014;
-  color: #ddefff;
+  width: 15rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .Home .buttons button.work {
   border: 4px solid #ddefff;
+  background-color: #000014;
+  margin-right: 5rem;
 }
 
 .Home .buttons button.contact {

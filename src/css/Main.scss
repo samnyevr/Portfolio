@@ -23,7 +23,7 @@ nav {
         position: absolute;
 
         img {
-            width: 60px;
+            width: 4rem;
             max-width: 100%;
             height: 100%;
         }
@@ -43,6 +43,10 @@ nav {
             h5 {
                 display: inline;
                 font-size: 25px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -52,39 +56,53 @@ nav {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    span {
-        font-size: 60px;
-        align-self: center;
-        justify-self: center;
-        margin-left: 100px;
-        width: 65%;
+    .desc {
+        font-size: 2.5rem;
+        margin: 10rem 10rem 5rem 10rem;
+        line-height: 5rem;
+        box-sizing: border-box;
+        text-align: center;
 
-        h1 {
-            font-size: 50px;
+        span {
+            display: block;
+        }
+
+        h2 {
+            display: inline;
+        }
+
+        // text glowing effect
+        .myName {
+            animation: glow 2500ms linear infinite 2000ms;
+            font-weight: bold;
+            font-size: 3em;
+            display: inline;
+        }
+
+        @keyframes glow {
+            40% {
+                text-shadow: 0 0 8px #fff;
+            }
         }
     }
 
     .buttons {
-        align-self: center;
-        justify-self: center;
-        width: auto;
-
         button {
+            padding: 1rem 0;
             border-radius: 10px;
-            border: none;
-            color: black;
-            width: 150px;
-            padding: 10px;
-            font-size: 16px;
-            display: block;
-            margin: 100px 0px;
-
-            background-color: $BackgroundColor;
-            color: $PrimearyColor;
+            width: 15rem;
+            font-size: 1.5rem;
+            font-weight: bold;
 
             &.work {
                 border: 4px solid $PrimearyColor;
+                background-color: $BackgroundColor;
+
+                margin-right: 5rem;
             }
 
             &.contact {
