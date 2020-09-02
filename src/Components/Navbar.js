@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../images/Logo 3 white small.svg";
+import Logo from "../images/Logo 3 slight white.svg";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
@@ -7,6 +7,7 @@ const Navbar = () => {
         <nav className="Nav" id="nav">
             <div className="Logo">
                 <img src={Logo} alt="" />
+                <h1>&nbsp;Sam Nye VR</h1>
             </div>
             <div className="Menu">
                 <ScrollLink
