@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSky.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyItalic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+.Project {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: radial-gradient(#303035 5%, #000014 95%);
+}
+
+.Project .left {
+  margin-top: 200px;
+  margin-left: 100px;
+  font-size: 50px;
+  width: 20%;
+}
+
+.Project .right {
+  margin-top: 200px;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  justify-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+.Project .card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 20px;
+  margin-top: 50px;
+  background-color: #333232;
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.Project .title {
+  height: 20%;
+  padding: 25px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.Project .mobile {
+  height: 60%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Project .mobile img {
+  width: 30%;
+  height: 100%;
+  padding: 10px;
+}
+
+.Project .desktop {
+  height: 60%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Project .desktop img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.Project .buttons {
+  height: 20%;
+  text-align: center;
+}
+
+.Project .buttons button {
+  border-radius: 10px;
+  margin: 1rem 2rem 0rem 2rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 4px solid #ddefff;
+  background: #ddefff;
+  color: #000014;
+}
+
+.Project .buttons button:hover {
+  border: 4px solid #b8c6d3;
+  background-color: #333232;
+  color: #b8c6d3;
+  -webkit-box-shadow: inset 0 0 10px #cf5353;
+          box-shadow: inset 0 0 10px #cf5353;
+}
+/*# sourceMappingURL=Project.css.map */

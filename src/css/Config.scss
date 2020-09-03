@@ -55,6 +55,13 @@ $BackgroundColor: #000014;
     }
 }
 
+// global button hover animation
+@mixin hoverButton {
+    button:hover {
+        background-color: red;
+    }
+}
+
 // media query mixin
 @mixin mediaSm {
     @media screen and (max-width: 500px) {

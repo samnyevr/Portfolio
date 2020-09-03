@@ -1,40 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
+
+import Axios from "axios";
 
 const Contact = () => {
+    const [state, setState] = useState({
+        name: "",
+        email: "",
+        message: "",
+        disabled: false,
+        emailSent: null,
+    });
+
+    const name = state.name;
+    const email = state.email;
+    const message = state.message;
+    const disabled = state.disabled;
+    const emailSent = state.emailSent;
+
+    const handleChange = (event) => {
+        const target = event.target;
+        const value =
+            target.type === "checkbox" ? target.checked : target.value;
+        const name = target.name;
+
+        setState({
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        setState({
+            disabled: true,
+        });
+        return;
+    };
+
     return (
         <div className="Contact" id="contact">
-            <h1 className="left">Contact</h1>
-            <div className="right">
-                <form action="/action_page.php">
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="fname">First Name</label>
+            <div className="page">
+                <form onSubmit={handleSubmit}>
+                    <h1 className="title">Contact Me</h1>
+                    <div className="info">
+                        <div className="name_field">
+                            <label for="name">
+                                Name
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    value={name}
+                                    onChange={handleChange}
+                                />
+                            </label>
                         </div>
-                        <div class="col-75">
-                            <input
-                                type="text"
-                                id="fname"
-                                name="firstname"
-                                placeholder="Your name.."
+                        <div className="email_field">
+                            <label for="email">
+                                Email
+                                <input
+                                    type="text"
+                                    id="email"
+                                    name="email"
+                                    value={email}
+                                    onChange={handleChange}
+                                />
+                            </label>
+                        </div>
+                    </div>
+                    <div className="message">
+                        <label for="message">
+                            Leave A Message
+                            <textarea
+                                name="message"
+                                value={message}
+                                onChange={handleChange}
+                                rows={6}
                             />
-                        </div>
+                        </label>
                     </div>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="lname">Last Name</label>
-                        </div>
-                        <div class="col-75">
-                            <input
-                                type="text"
-                                id="lname"
-                                name="lastname"
-                                placeholder="Your last name.."
-                            />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <input type="submit" value="Submit" />
-                    </div>
+                    <button type="submit" disabled={disabled}>
+                        Submit
+                    </button>
+                    {emailSent === true && (
+                        <p className="success-msg">Email Sent</p>
+                    )}
+                    {emailSent === false && (
+                        <p className="err-msg">Email Not Sent</p>
+                    )}
                 </form>
             </div>
         </div>

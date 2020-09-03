@@ -16,8 +16,28 @@ const Home = () => {
                 </span>
             </span>
             <div className="buttons">
-                <button className="work">View My Work</button>
-                <button className="contact">Contact Me</button>
+                <ScrollLink
+                    className="ScrollLink"
+                    activeClass="active"
+                    to="project"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                >
+                    <button className="work">View My Work</button>
+                </ScrollLink>
+                <ScrollLink
+                    className="ScrollLink"
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                >
+                    <button className="contact">Contact Me</button>
+                </ScrollLink>
             </div>
         </div>
     );
