@@ -25,4 +25,14 @@
   font-weight: bold;
   font-style: italic;
 }
+
+@font-face {
+  font-family: "Orbitron";
+  src: url(../Fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat/Montserrat-Regular.ttf);
+}
 /*# sourceMappingURL=Config.css.map */

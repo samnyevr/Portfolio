@@ -26,6 +26,16 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Orbitron";
+  src: url(../Fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat/Montserrat-Black.ttf);
+}
+
 .Contact {
   width: 100%;
   -webkit-box-sizing: border-box;

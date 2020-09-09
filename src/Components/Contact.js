@@ -34,7 +34,27 @@ const Contact = () => {
         setState({
             disabled: true,
         });
-        return;
+
+        Axios.post("http://localhost:3030/api/email", state)
+            .then((res) => {
+                if (res.data.success) {
+                    setState({
+                        disabled: false,
+                        emailSent: true,
+                    });
+                } else {
+                    setState({
+                        disabled: false,
+                        emailSent: false,
+                    });
+                }
+            })
+            .catch((err) => {
+                setState({
+                    disabled: false,
+                    emailSent: false,
+                });
+            });
     };
 
     return (
@@ -56,7 +76,7 @@ const Contact = () => {
                             </label>
                         </div>
                         <div className="email_field">
-                            <label for="email">
+                            <label htmlfor="email">
                                 Email
                                 <input
                                     type="text"
