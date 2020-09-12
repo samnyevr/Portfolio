@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSky.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyItalic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url(../Fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  nav {
+    padding-right: 5px;
+    margin-top: 60px;
+  }
+  nav .ScrollLink {
+    margin-right: 1rem;
+  }
+  nav .ScrollLink h4 {
+    padding: 5px;
+    font-size: 1.2rem;
+    border: 2px solid rgba(0, 0, 0, 0);
+  }
+  nav .ScrollLink h4:hover {
+    border: 2px solid #b8c6d3;
+    background-color: #333232;
+    color: #b8c6d3;
+    -webkit-box-shadow: inset 0 0 10px #cf5353;
+            box-shadow: inset 0 0 10px #cf5353;
+  }
+  .Home {
+    padding: 3rem;
+  }
+  .Home .desc {
+    font-size: 1.3rem;
+  }
+  .Home .buttons {
+    right: 8vw;
+  }
+  .Home .buttons button {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .Home {
+    padding: 3rem;
+  }
+  .Home .Logo img {
+    width: 2.2rem;
+  }
+  .Home .Logo h5 {
+    font-size: 1rem;
+  }
+  .Home .desc {
+    font-size: 1rem;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .Home .buttons {
+    position: relative;
+    right: 0;
+    text-align: center;
+  }
+  .Home .buttons button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Home {
+    padding: 2rem;
+  }
+  .Home .Logo img {
+    width: 2.2rem;
+  }
+  .Home .Logo h5 {
+    font-size: 1rem;
+  }
+  .Home .desc {
+    font-size: 1rem;
+    margin-top: 5rem;
+  }
+  .Home .desc .myName {
+    font-size: 2.5em;
+  }
+  .Home .desc .myRole {
+    display: block;
+  }
+  .Home .desc .fall {
+    display: block;
+  }
+  .Home .buttons {
+    margin-top: 5rem;
+    position: relative;
+    right: 0;
+    text-align: center;
+  }
+  .Home .buttons button {
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */

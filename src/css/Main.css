@@ -53,14 +53,45 @@
 
 nav {
   width: 100%;
-  margin: 0px 100px;
   color: #ddefff;
-  z-index: 10;
+  position: fixed;
+  margin-top: 90px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-nav .Logo {
-  margin-top: 50px;
-  position: absolute;
+nav .ScrollLink {
+  margin-right: 3rem;
+}
+
+nav .ScrollLink h4 {
+  padding: 9px;
+  border-radius: 5px;
+  display: inline;
+  font-size: 1.5rem;
+  border: 4px solid rgba(0, 0, 0, 0);
+}
+
+nav .ScrollLink h4:hover {
+  border: 4px solid #b8c6d3;
+  background-color: #333232;
+  color: #b8c6d3;
+  -webkit-box-shadow: inset 0 0 10px #cf5353;
+          box-shadow: inset 0 0 10px #cf5353;
+}
+
+.Home {
+  height: 100vh;
+  padding: 5rem;
+  background-image: radial-gradient(#303035 5%, #000014 95%);
+}
+
+.Home .Logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,67 +100,21 @@ nav .Logo {
           align-items: center;
 }
 
-nav .Logo img {
-  width: 4rem;
+.Home .Logo img {
+  width: 3rem;
   max-width: 100%;
   height: 100%;
 }
 
-nav .Logo h1 {
+.Home .Logo h5 {
   height: 100%;
-}
-
-nav .Menu {
-  position: fixed;
-  width: 500px;
-  margin-top: 100px;
-  margin-left: 600px;
-  margin-right: 100px;
-  text-align: bottom;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-nav .Menu .ScrollLink {
-  margin-right: 80px;
-}
-
-nav .Menu .ScrollLink h5 {
-  display: inline;
-  font-size: 25px;
-}
-
-nav .Menu .ScrollLink h5:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.Home {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: radial-gradient(#303035 5%, #000014 95%);
+  font-size: 1.2rem;
 }
 
 .Home .desc {
-  font-size: 2.5rem;
-  margin: 10rem 10rem 5rem 10rem;
+  font-size: 1.5rem;
   line-height: 5rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: center;
+  margin-top: 10rem;
   cursor: default;
 }
 
@@ -137,8 +122,13 @@ nav .Menu .ScrollLink h5:hover {
   display: block;
 }
 
+.Home .desc h1 {
+  display: inline;
+}
+
 .Home .desc h2 {
   display: inline;
+  color: rgba(221, 239, 255, 0.7);
 }
 
 .Home .desc .myName {
@@ -161,10 +151,15 @@ nav .Menu .ScrollLink h5:hover {
   }
 }
 
+.Home .buttons {
+  margin-top: 5rem;
+  position: absolute;
+  right: 10vw;
+}
+
 .Home .buttons button {
-  padding: 1rem 0;
+  padding: 1rem;
   border-radius: 10px;
-  width: 15rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -192,46 +187,35 @@ nav .Menu .ScrollLink h5:hover {
 }
 
 .About {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 100vh;
   background-image: radial-gradient(#303035 5%, #000014 95%);
-}
-
-.About .left {
-  margin-top: 200px;
-  margin-left: 100px;
-  font-size: 50px;
-  width: 20%;
-}
-
-.About .right {
-  margin-top: 200px;
-  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  justify-items: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 100px;
+  font-family: Montserrat;
 }
 
 .About .right {
+  font-family: inherit;
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
 .About .right span {
+  font-family: inherit;
   font-size: 3rem;
 }
 
+.About .right span ul {
+  font-family: inherit;
+}
+
 .About .right span li {
+  font-family: inherit;
   text-decoration: none;
   list-style: none;
   font-size: 2rem;
@@ -649,5 +633,143 @@ nav .Menu .ScrollLink h5:hover {
 
 .Contact form p.err-msg {
   color: #ff2828;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSky.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyItalic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url(../Fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  nav {
+    padding-right: 5px;
+    margin-top: 60px;
+  }
+  nav .ScrollLink {
+    margin-right: 1rem;
+  }
+  nav .ScrollLink h4 {
+    padding: 5px;
+    font-size: 1.2rem;
+    border: 2px solid rgba(0, 0, 0, 0);
+  }
+  nav .ScrollLink h4:hover {
+    border: 2px solid #b8c6d3;
+    background-color: #333232;
+    color: #b8c6d3;
+    -webkit-box-shadow: inset 0 0 10px #cf5353;
+            box-shadow: inset 0 0 10px #cf5353;
+  }
+  .Home {
+    padding: 3rem;
+  }
+  .Home .desc {
+    font-size: 1.3rem;
+  }
+  .Home .buttons {
+    right: 8vw;
+  }
+  .Home .buttons button {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .Home {
+    padding: 3rem;
+  }
+  .Home .Logo img {
+    width: 2.2rem;
+  }
+  .Home .Logo h5 {
+    font-size: 1rem;
+  }
+  .Home .desc {
+    font-size: 1rem;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .Home .buttons {
+    position: relative;
+    right: 0;
+    text-align: center;
+  }
+  .Home .buttons button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Home {
+    padding: 2rem;
+  }
+  .Home .Logo img {
+    width: 2.2rem;
+  }
+  .Home .Logo h5 {
+    font-size: 1rem;
+  }
+  .Home .desc {
+    font-size: 1rem;
+    margin-top: 5rem;
+  }
+  .Home .desc .myName {
+    font-size: 2.5em;
+  }
+  .Home .desc .myRole {
+    display: block;
+  }
+  .Home .desc .fall {
+    display: block;
+  }
+  .Home .buttons {
+    margin-top: 5rem;
+    position: relative;
+    right: 0;
+    text-align: center;
+  }
+  .Home .buttons button {
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
 }
 /*# sourceMappingURL=Main.css.map */

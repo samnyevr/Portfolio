@@ -1,63 +1,56 @@
 import React from "react";
-import Logo from "../images/Logo 3 slight white.svg";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
     return (
         <nav className="Nav" id="nav">
-            <div className="Logo">
-                <img src={Logo} alt="" />
-                <h1>&nbsp;Sam Nye VR</h1>
-            </div>
-            <div className="Menu">
-                <ScrollLink
-                    className="ScrollLink"
-                    activeClass="active"
-                    to="home"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                >
-                    <h5>Home</h5>
-                </ScrollLink>
+            <ScrollLink
+                className="ScrollLink"
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+            >
+                <h4>Home</h4>
+            </ScrollLink>
 
-                <ScrollLink
-                    className="ScrollLink"
-                    activeClass="active"
-                    to="project"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                >
-                    <h5>Project</h5>
-                </ScrollLink>
+            <ScrollLink
+                className="ScrollLink"
+                activeClass="active"
+                to="project"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+            >
+                <h4>Project</h4>
+            </ScrollLink>
 
-                <ScrollLink
-                    className="ScrollLink"
-                    activeClass="active"
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                >
-                    <h5>About</h5>
-                </ScrollLink>
+            <ScrollLink
+                className="ScrollLink"
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+            >
+                <h4>About</h4>
+            </ScrollLink>
 
-                <ScrollLink
-                    className="ScrollLink"
-                    activeClass="active"
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                >
-                    <h5>Contact</h5>
-                </ScrollLink>
-            </div>
+            <ScrollLink
+                className="ScrollLink"
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+            >
+                <h4>Contact</h4>
+            </ScrollLink>
         </nav>
     );
 };

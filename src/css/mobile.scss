@@ -1,15 +1,131 @@
+@import "Config.scss";
+
 // Widescreens
 @include mediaXl {
 }
 
 // Desktops & Laptops
 @include mediaLg {
+    nav {
+        padding-right: 5px;
+        margin-top: 60px;
+
+        .ScrollLink {
+            margin-right: 1rem;
+            h4 {
+                padding: 5px;
+                font-size: 1.2rem;
+                border: 2px solid rgba(0, 0, 0, 0);
+
+                &:hover {
+                    border: 2px solid #b8c6d3;
+                    background-color: #333232;
+                    color: #b8c6d3;
+                    box-shadow: inset 0 0 10px $SecondaryColor;
+                }
+            }
+        }
+    }
+
+    .Home {
+        padding: 3rem;
+
+        .desc {
+            font-size: 1.3rem;
+        }
+
+        .buttons {
+            right: 8vw;
+
+            button {
+                padding: 0.8rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
+    nav {
+        display: none;
+    }
+
+    .Home {
+        padding: 3rem;
+
+        .Logo {
+            img {
+                width: 2.2rem;
+            }
+
+            h5 {
+                font-size: 1rem;
+            }
+        }
+
+        .desc {
+            font-size: 1rem;
+            margin-top: 8rem;
+            text-align: center;
+        }
+
+        .buttons {
+            position: relative;
+            right: 0;
+            text-align: center;
+
+            button {
+                font-size: 1rem;
+            }
+        }
+    }
 }
 
 // Smartphones
 @include mediaSm {
+    .Home {
+        padding: 2rem;
+
+        .Logo {
+            img {
+                width: 2.2rem;
+            }
+
+            h5 {
+                font-size: 1rem;
+            }
+        }
+
+        .desc {
+            font-size: 1rem;
+            margin-top: 5rem;
+
+            .myName {
+                font-size: 2.5em;
+            }
+
+            .myRole {
+                display: block;
+            }
+
+            .fall {
+                display: block;
+            }
+        }
+
+        .buttons {
+            margin-top: 5rem;
+            position: relative;
+            right: 0;
+            text-align: center;
+
+            button {
+                padding: 0.8rem;
+                border-radius: 10px;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    }
 }
