@@ -35,4 +35,183 @@
   font-family: "Montserrat";
   src: url(../Fonts/Montserrat/Montserrat-Regular.ttf);
 }
+
+.Project {
+  background-image: radial-gradient(#303035 5%, #000014 95%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 5vw;
+}
+
+.Project .project-title {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  z-index: 2;
+}
+
+.Project .card {
+  width: 80%;
+  height: 60vh;
+  display: -ms-grid;
+  display: grid;
+  margin: 10%;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  -ms-grid-rows: 2fr 8fr;
+      grid-template-rows: 2fr 8fr;
+  padding: 5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.Project .card:hover {
+  -webkit-animation: cardmove linear 0.5s;
+          animation: cardmove linear 0.5s;
+  -webkit-box-shadow: 0px 0px 3px 1px white;
+          box-shadow: 0px 0px 3px 1px white;
+}
+
+@-webkit-keyframes cardmove {
+  from {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 3px 1px white;
+            box-shadow: 0px 0px 3px 1px white;
+  }
+}
+
+@keyframes cardmove {
+  from {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 3px 1px white;
+            box-shadow: 0px 0px 3px 1px white;
+  }
+}
+
+.Project .card .desktop {
+  display: initial;
+}
+
+.Project .card .mobile {
+  display: none;
+}
+
+.Project .card .demo {
+  width: 250px;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.Project .card .demo.odd {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.Project .card .demo.even {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 3 / 3 / 4;
+}
+
+.Project .card .content {
+  padding: 20px;
+  padding-left: 30px;
+}
+
+.Project .card .content.odd {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 2 / 3 / 4;
+}
+
+.Project .card .content.even {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.Project .card .content .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Project .card .content .title h1 {
+  display: inline;
+  font-size: 2.5rem;
+}
+
+.Project .card .content .title button {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.5em;
+  margin-left: 20px;
+  border: 4px solid #ddefff;
+  background: #ddefff;
+  color: #000014;
+  cursor: pointer;
+}
+
+.Project .card .content .title button:hover {
+  border: 4px solid #b8c6d3;
+  background-color: #333232;
+  color: #b8c6d3;
+  -webkit-box-shadow: inset 0 0 10px #cf5353;
+          box-shadow: inset 0 0 10px #cf5353;
+}
+
+.Project .card .content p {
+  padding: 20px 0;
+  max-width: 85%;
+  word-wrap: break-word;
+  font-size: 1.2rem;
+  font-family: Montserrat;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.Project .card.clostat {
+  background: linear-gradient(110.73deg, rgba(0, 0, 20, 0.31) 0%, rgba(255, 251, 245, 0.08) 18.71%, rgba(255, 251, 245, 0.03) 74.04%, rgba(255, 251, 245, 0) 100%), url("../images/CloStat/CloStat Logo Transparent.png") no-repeat;
+  background-size: auto, 500px;
+  background-position: 150% -100%;
+}
+
+.Project .card.markit {
+  background: linear-gradient(290.74deg, rgba(0, 0, 20, 0.31) 0%, rgba(244, 128, 88, 0.05) 18.71%, rgba(244, 128, 88, 0.03) 74.04%, rgba(244, 128, 88, 0) 100%), url("../images/MarkIt/MarkIt Logo Transparent.png") no-repeat;
+  background-size: auto, 1500px;
+  background-position: -30% 90%;
+}
+
+.Project .card.shoperone {
+  background: linear-gradient(110.73deg, rgba(0, 0, 20, 0.31) 0%, rgba(247, 187, 109, 0.05) 18.71%, rgba(247, 187, 109, 0.03) 74.04%, rgba(247, 187, 109, 0) 100%), url("../images/Shoperone/Shoperone Logo Transparent.png") no-repeat;
+  background-size: auto, 600px;
+  background-position: 150% -60%;
+}
+
+.Project .card.ptt {
+  background: linear-gradient(290.74deg, rgba(0, 0, 20, 0.31) 0%, rgba(103, 172, 201, 0.05) 18.71%, rgba(103, 172, 201, 0.03) 74.04%, rgba(103, 172, 201, 0) 100%), url("../images/Paint The Town/PTT Logo Transparent.png") no-repeat;
+  background-size: auto, 700px;
+  background-position: 150% 100%;
+}
 /*# sourceMappingURL=Project.css.map */

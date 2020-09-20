@@ -3,9 +3,7 @@ import React from "react";
 const Contact = () => {
     return (
         <div className="Contact" id="contact">
-            <div className="">
-                <h1>Contact Me</h1>
-            </div>
+            <h1 className="contact-title">Contact Me</h1>
         </div>
     );
 };

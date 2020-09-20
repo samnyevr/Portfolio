@@ -54,12 +54,13 @@
 nav {
   width: 100%;
   color: #ddefff;
+  background-color: rgba(26, 26, 34, 0.62);
   position: fixed;
-  margin-top: 90px;
-  padding-right: 20px;
+  padding: 90px 20px 20px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 2;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -85,6 +86,10 @@ nav .ScrollLink h4:hover {
           box-shadow: inset 0 0 10px #cf5353;
 }
 
+nav .hideBtn {
+  display: none;
+}
+
 .Home {
   height: 100vh;
   padding: 5rem;
@@ -104,11 +109,13 @@ nav .ScrollLink h4:hover {
   width: 3rem;
   max-width: 100%;
   height: 100%;
+  z-index: 3;
 }
 
 .Home .Logo h5 {
   height: 100%;
   font-size: 1.2rem;
+  z-index: 3;
 }
 
 .Home .desc {
@@ -168,6 +175,8 @@ nav .ScrollLink h4:hover {
   border: 4px solid #ddefff;
   background: #ddefff;
   color: #000014;
+  -webkit-box-shadow: 2px 2px 5px rgba(221, 239, 255, 0.5);
+          box-shadow: 2px 2px 5px rgba(221, 239, 255, 0.5);
   margin-right: 5rem;
 }
 
@@ -175,6 +184,8 @@ nav .ScrollLink h4:hover {
   border: 4px solid #ddefff;
   background: #ddefff;
   color: #000014;
+  -webkit-box-shadow: 2px 2px 5px rgba(221, 239, 255, 0.5);
+          box-shadow: 2px 2px 5px rgba(221, 239, 255, 0.5);
 }
 
 .Home .buttons button:hover {
@@ -195,30 +206,144 @@ nav .ScrollLink h4:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  padding: 100px;
+  padding: 5vw;
   font-family: Montserrat;
 }
 
-.About .right {
+.About .about-title {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  z-index: 2;
+}
+
+.About .content {
   font-family: inherit;
   -ms-grid-column-align: center;
       justify-self: center;
+  padding: 7rem;
 }
 
-.About .right span {
+.About .content span {
   font-family: inherit;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
-.About .right span ul {
+.About .content .about-card {
   font-family: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.About .right span li {
+.About .content .about-card .card {
   font-family: inherit;
+  width: 30%;
+  height: 200px;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+  background-color: rgba(0, 0, 20, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.About .content .about-card .card .about-card-title {
+  font-size: 2em;
+  font-weight: bold;
+  position: relative;
+  top: 40%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.About .content .about-card .card .about-card-content {
+  font-family: inherit;
+  position: relative;
+  top: 20%;
+  -webkit-animation: card-content-move 0.5s 1;
+          animation: card-content-move 0.5s 1;
+}
+
+@-webkit-keyframes card-content-move {
+  from {
+    top: 40%;
+  }
+  to {
+    top: 20%;
+  }
+}
+
+@keyframes card-content-move {
+  from {
+    top: 40%;
+  }
+  to {
+    top: 20%;
+  }
+}
+
+.About .content .about-card .card li {
+  font-family: inherit;
+  font-weight: bold;
   text-decoration: none;
   list-style: none;
-  font-size: 2rem;
+  font-size: 1rem;
+  padding-top: 2px;
+}
+
+.About .content .about-card .card:hover .about-card-title {
+  top: 5%;
+  opacity: 0.5;
+}
+
+.Contact {
+  padding: 5vw;
+}
+
+.Contact .contact-title {
+  position: relative;
+  z-index: 2;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSky.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyItalic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "FaxineSky";
+  src: url(../Fonts/FaxineSkyBoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url(../Fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat/Montserrat-Regular.ttf);
 }
 
 .Project {
@@ -230,7 +355,13 @@ nav .ScrollLink h4:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  padding: 100px;
+  padding: 5vw;
+}
+
+.Project .project-title {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  z-index: 2;
 }
 
 .Project .card {
@@ -243,7 +374,7 @@ nav .ScrollLink h4:hover {
       grid-template-columns: 1fr 3fr 1fr;
   -ms-grid-rows: 2fr 8fr;
       grid-template-rows: 2fr 8fr;
-  padding: 100px;
+  padding: 5vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 20px;
@@ -278,14 +409,22 @@ nav .ScrollLink h4:hover {
   }
 }
 
-.Project .card img {
-  width: 100%;
+.Project .card .desktop {
+  display: initial;
+}
+
+.Project .card .mobile {
+  display: none;
+}
+
+.Project .card .demo {
+  width: 250px;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.Project .card img.odd {
+.Project .card .demo.odd {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -293,7 +432,7 @@ nav .ScrollLink h4:hover {
   grid-area: 1 / 1 / 3 / 2;
 }
 
-.Project .card img.even {
+.Project .card .demo.even {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 3;
@@ -359,60 +498,31 @@ nav .ScrollLink h4:hover {
   font-size: 1.2rem;
   font-family: Montserrat;
   font-weight: normal;
+  letter-spacing: 1px;
 }
 
 .Project .card.clostat {
-  background: linear-gradient(110.73deg, rgba(0, 0, 20, 0.31) 0%, rgba(255, 251, 245, 0.08) 18.71%, rgba(255, 251, 245, 0.03) 74.04%, rgba(255, 251, 245, 0) 100%);
+  background: linear-gradient(110.73deg, rgba(0, 0, 20, 0.31) 0%, rgba(255, 251, 245, 0.08) 18.71%, rgba(255, 251, 245, 0.03) 74.04%, rgba(255, 251, 245, 0) 100%), url("../images/CloStat/CloStat Logo Transparent.png") no-repeat;
+  background-size: auto, 500px;
+  background-position: 150% -100%;
 }
 
 .Project .card.markit {
-  background: linear-gradient(290.74deg, rgba(0, 0, 20, 0.31) 0%, rgba(244, 128, 88, 0.05) 18.71%, rgba(244, 128, 88, 0.03) 74.04%, rgba(244, 128, 88, 0) 100%);
+  background: linear-gradient(290.74deg, rgba(0, 0, 20, 0.31) 0%, rgba(244, 128, 88, 0.05) 18.71%, rgba(244, 128, 88, 0.03) 74.04%, rgba(244, 128, 88, 0) 100%), url("../images/MarkIt/MarkIt Logo Transparent.png") no-repeat;
+  background-size: auto, 1500px;
+  background-position: -30% 90%;
 }
 
 .Project .card.shoperone {
-  background: linear-gradient(110.73deg, rgba(0, 0, 20, 0.31) 0%, rgba(247, 187, 109, 0.05) 18.71%, rgba(247, 187, 109, 0.03) 74.04%, rgba(247, 187, 109, 0) 100%);
+  background: linear-gradient(110.73deg, rgba(0, 0, 20, 0.31) 0%, rgba(247, 187, 109, 0.05) 18.71%, rgba(247, 187, 109, 0.03) 74.04%, rgba(247, 187, 109, 0) 100%), url("../images/Shoperone/Shoperone Logo Transparent.png") no-repeat;
+  background-size: auto, 600px;
+  background-position: 150% -60%;
 }
 
 .Project .card.ptt {
-  background: linear-gradient(290.74deg, rgba(0, 0, 20, 0.31) 0%, rgba(103, 172, 201, 0.05) 18.71%, rgba(103, 172, 201, 0.03) 74.04%, rgba(103, 172, 201, 0) 100%);
-}
-
-@font-face {
-  font-family: "FaxineSky";
-  src: url(../Fonts/FaxineSky.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FaxineSky";
-  src: url(../Fonts/FaxineSkyBold.ttf);
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FaxineSky";
-  src: url(../Fonts/FaxineSkyItalic.ttf);
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "FaxineSky";
-  src: url(../Fonts/FaxineSkyBoldItalic.ttf);
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url(../Fonts/Orbitron-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url(../Fonts/Montserrat/Montserrat-Regular.ttf);
+  background: linear-gradient(290.74deg, rgba(0, 0, 20, 0.31) 0%, rgba(103, 172, 201, 0.05) 18.71%, rgba(103, 172, 201, 0.03) 74.04%, rgba(103, 172, 201, 0) 100%), url("../images/Paint The Town/PTT Logo Transparent.png") no-repeat;
+  background-size: auto, 700px;
+  background-position: 150% 100%;
 }
 
 @font-face {
@@ -675,8 +785,7 @@ nav .ScrollLink h4:hover {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   nav {
-    padding-right: 5px;
-    margin-top: 60px;
+    padding: 60px 5px 35px 0px;
   }
   nav .ScrollLink {
     margin-right: 1rem;
@@ -706,14 +815,135 @@ nav .ScrollLink h4:hover {
     padding: 0.8rem;
     font-size: 1.2rem;
   }
+  .Project {
+    padding: 5vw;
+  }
+  .Project .card {
+    width: 85%;
+    padding: 3vw;
+  }
+  .Project .card .desktop {
+    display: initial;
+  }
+  .Project .card .mobile {
+    display: none;
+  }
+  .Project .card img {
+    width: 200px;
+  }
+  .Project .card .content {
+    padding: 10px;
+    padding-left: 15px;
+  }
+  .Project .card .content .title {
+    padding-top: 20px;
+  }
+  .Project .card .content .title h1 {
+    font-size: 2rem;
+  }
+  .Project .card .content .title button {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    padding: 0.5em;
+  }
+  .Project .card .content p {
+    max-width: 95%;
+  }
+  .About .content {
+    padding: 5rem;
+  }
+  .About .content span {
+    font-family: inherit;
+    font-size: 2rem;
+  }
+  .About .content .about-card {
+    font-family: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .About .content .about-card .card {
+    font-family: inherit;
+    font-size: 2em;
+  }
+  .About .content .about-card .card li {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  nav {
+  .Nav nav {
+    width: 50%;
+    height: 100vh;
+    right: 0;
+    border-radius: 10px;
+    margin-top: 0px;
+    padding: 20% 0px 30% 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .Nav nav.Hide {
     display: none;
+  }
+  .Nav nav .ScrollLink {
+    margin: 0px;
+    text-align: center;
+  }
+  .Nav nav .ScrollLink h4 {
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid rgba(0, 0, 0, 0);
+  }
+  .Nav nav .ScrollLink h4:hover {
+    border: 2px solid #b8c6d3;
+    background-color: #333232;
+    color: #b8c6d3;
+    -webkit-box-shadow: inset 0 0 10px #cf5353;
+            box-shadow: inset 0 0 10px #cf5353;
+  }
+  .Nav .menu-btn {
+    position: fixed;
+    z-index: 3;
+    top: 3rem;
+    right: 10%;
+    cursor: pointer;
+  }
+  .Nav .menu-btn .btn-line {
+    cursor: pointer;
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #ddefff;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  .Nav .menu-btn.close {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .Nav .menu-btn.close .btn-line:nth-child(1) {
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+            transform: rotate(45deg) translate(5px, 5px);
+  }
+  .Nav .menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+  }
+  .Nav .menu-btn.close .btn-line:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate(7px, -6px);
+            transform: rotate(-45deg) translate(7px, -6px);
   }
   .Home {
     padding: 3rem;
+    height: auto;
   }
   .Home .Logo img {
     width: 2.2rem;
@@ -726,6 +956,12 @@ nav .ScrollLink h4:hover {
     margin-top: 8rem;
     text-align: center;
   }
+  .Home .desc .desktop {
+    display: initial;
+  }
+  .Home .desc .mobile {
+    display: none;
+  }
   .Home .buttons {
     position: relative;
     right: 0;
@@ -734,11 +970,88 @@ nav .ScrollLink h4:hover {
   .Home .buttons button {
     font-size: 1rem;
   }
+  .Home .buttons button.work {
+    border-width: 3px;
+    margin-right: 3rem;
+  }
+  .Home .buttons button.contact {
+    border-width: 3px;
+  }
+  .Home .buttons button:hover {
+    border: 3px solid #b8c6d3;
+    background-color: #333232;
+    color: #b8c6d3;
+    -webkit-box-shadow: inset 0 0 10px #cf5353;
+            box-shadow: inset 0 0 10px #cf5353;
+    cursor: pointer;
+  }
+  .Project {
+    padding: 5vw;
+    max-height: auto;
+  }
+  .Project .card {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 10% 0px;
+  }
+  .Project .card img {
+    padding: 10px;
+    width: 180px;
+  }
+  .Project .card .content {
+    padding-top: 90px;
+    padding-left: 15px;
+  }
+  .Project .card .content .title h1 {
+    font-size: 1.6rem;
+  }
+  .Project .card .content .title button {
+    font-size: 0.7rem;
+    padding: 0.5em;
+  }
+  .Project .card .content p {
+    max-width: 95%;
+    font-size: 1rem;
+  }
+  .About .content {
+    padding: 2rem;
+  }
+  .About .content span {
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+  .About .content .about-card {
+    font-family: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .About .content .about-card .card {
+    font-size: 2em;
+  }
+  .About .content .about-card .card ul {
+    font-family: inherit;
+  }
+  .About .content .about-card .card li {
+    font-family: inherit;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  .Nav .menu-btn {
+    top: 2rem;
+  }
   .Home {
     padding: 2rem;
+    max-height: auto;
   }
   .Home .Logo img {
     width: 2.2rem;
@@ -749,6 +1062,7 @@ nav .ScrollLink h4:hover {
   .Home .desc {
     font-size: 1rem;
     margin-top: 5rem;
+    line-height: 3rem;
   }
   .Home .desc .myName {
     font-size: 2.5em;
@@ -760,16 +1074,85 @@ nav .ScrollLink h4:hover {
     display: block;
   }
   .Home .buttons {
-    margin-top: 5rem;
-    position: relative;
-    right: 0;
-    text-align: center;
+    font-weight: normal;
   }
   .Home .buttons button {
     padding: 0.8rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 3vw;
+  }
+  .Home .buttons button.work {
+    border: 2px solid #ddefff;
+    margin-right: 5vw;
+  }
+  .Home .buttons button.contact {
+    border: 2px solid #ddefff;
+  }
+  .Home .buttons button:hover {
+    border: 2px solid #b8c6d3;
+    background-color: #333232;
+    color: #b8c6d3;
+    -webkit-box-shadow: inset 0 0 10px #cf5353;
+            box-shadow: inset 0 0 10px #cf5353;
+    cursor: pointer;
+  }
+  .Project {
+    max-height: auto;
+  }
+  .Project .card {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Project .card .desktop {
+    display: none;
+  }
+  .Project .card .mobile {
+    display: initial;
+  }
+  .Project .card img {
+    padding: 10px;
+    width: 180px;
+  }
+  .Project .card .content {
+    padding: 10px 0px 0px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Project .card .content .title {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Project .card .content p {
+    max-width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  .About .content {
+    padding: 2rem;
+  }
+  .About .content span {
+    font-family: inherit;
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=Main.css.map */

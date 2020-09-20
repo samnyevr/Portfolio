@@ -7,8 +7,7 @@
 // Desktops & Laptops
 @include mediaLg {
     nav {
-        padding-right: 5px;
-        margin-top: 60px;
+        padding: 60px 5px 35px 0px;
 
         .ScrollLink {
             margin-right: 1rem;
@@ -43,16 +42,151 @@
             }
         }
     }
+
+    .Project {
+        padding: 5vw;
+
+        .card {
+            width: 85%;
+            padding: 3vw;
+
+            .desktop {
+                display: initial;
+            }
+
+            .mobile {
+                display: none;
+            }
+
+            img {
+                width: 200px;
+            }
+
+            .content {
+                padding: 10px;
+                padding-left: 15px;
+
+                .title {
+                    padding-top: 20px;
+
+                    h1 {
+                        font-size: 2rem;
+                    }
+
+                    button {
+                        margin-top: 2px;
+                        font-size: 0.7rem;
+                        padding: 0.5em;
+                    }
+                }
+
+                p {
+                    max-width: 95%;
+                }
+            }
+        }
+    }
+
+    .About {
+        .content {
+            padding: 5rem;
+
+            span {
+                font-family: inherit;
+                font-size: 2rem;
+            }
+
+            .about-card {
+                font-family: inherit;
+                display: flex;
+                margin-top: 3em;
+                justify-content: space-between;
+
+                .card {
+                    font-family: inherit;
+                    font-size: 2em;
+
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
-    nav {
-        display: none;
+    .Nav {
+        nav {
+            width: 50%;
+            height: 100vh;
+            right: 0;
+            border-radius: 10px;
+
+            margin-top: 0px;
+            padding: 20% 0px 30% 0px;
+            flex-direction: column;
+            justify-content: space-around;
+
+            &.Hide {
+                display: none;
+            }
+
+            .ScrollLink {
+                margin: 0px;
+                text-align: center;
+
+                h4 {
+                    display: inline-block;
+                    width: 100%;
+                    padding: 20px;
+                    border: 2px solid rgba(0, 0, 0, 0);
+
+                    &:hover {
+                        border: 2px solid #b8c6d3;
+                        background-color: #333232;
+                        color: #b8c6d3;
+                        box-shadow: inset 0 0 10px $SecondaryColor;
+                    }
+                }
+            }
+        }
+
+        .menu-btn {
+            position: fixed;
+            z-index: 3;
+            top: 3rem;
+            right: 10%;
+            cursor: pointer;
+        }
+
+        .menu-btn .btn-line {
+            cursor: pointer;
+            width: 28px;
+            height: 3px;
+            margin: 0 0 5px 0;
+            background: $PrimearyColor;
+            transition: all 0.5s ease-out;
+        }
+
+        .menu-btn.close {
+            transform: rotate(180deg);
+        }
+        .menu-btn.close .btn-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .menu-btn.close .btn-line:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-btn.close .btn-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
     }
 
     .Home {
         padding: 3rem;
+        height: auto;
 
         .Logo {
             img {
@@ -68,6 +202,14 @@
             font-size: 1rem;
             margin-top: 8rem;
             text-align: center;
+
+            .desktop {
+                display: initial;
+            }
+
+            .mobile {
+                display: none;
+            }
         }
 
         .buttons {
@@ -77,6 +219,94 @@
 
             button {
                 font-size: 1rem;
+
+                &.work {
+                    border-width: 3px;
+                    margin-right: 3rem;
+                }
+
+                &.contact {
+                    border-width: 3px;
+                }
+
+                &:hover {
+                    border: 3px solid #b8c6d3;
+                    background-color: #333232;
+                    color: #b8c6d3;
+                    box-shadow: inset 0 0 10px $SecondaryColor;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .Project {
+        padding: 5vw;
+        max-height: auto;
+
+        .card {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin: 10% 0px;
+
+            img {
+                padding: 10px;
+                width: 180px;
+            }
+
+            .content {
+                padding-top: 90px;
+                padding-left: 15px;
+
+                .title {
+                    h1 {
+                        font-size: 1.6rem;
+                    }
+
+                    button {
+                        font-size: 0.7rem;
+                        padding: 0.5em;
+                    }
+                }
+
+                p {
+                    max-width: 95%;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .About {
+        .content {
+            padding: 2rem;
+
+            span {
+                font-family: inherit;
+                font-size: 1.5rem;
+            }
+
+            .about-card {
+                font-family: inherit;
+                display: flex;
+                margin-top: 3em;
+                justify-content: space-between;
+
+                .card {
+                    font-size: 2em;
+
+                    ul {
+                        font-family: inherit;
+                    }
+
+                    li {
+                        font-family: inherit;
+                        text-decoration: none;
+                        list-style: none;
+                        font-size: 1rem;
+                    }
+                }
             }
         }
     }
@@ -84,8 +314,15 @@
 
 // Smartphones
 @include mediaSm {
+    .Nav {
+        .menu-btn {
+            top: 2rem;
+        }
+    }
+
     .Home {
         padding: 2rem;
+        max-height: auto;
 
         .Logo {
             img {
@@ -100,6 +337,7 @@
         .desc {
             font-size: 1rem;
             margin-top: 5rem;
+            line-height: 3rem;
 
             .myName {
                 font-size: 2.5em;
@@ -115,16 +353,80 @@
         }
 
         .buttons {
-            margin-top: 5rem;
-            position: relative;
-            right: 0;
-            text-align: center;
+            font-weight: normal;
 
             button {
                 padding: 0.8rem;
-                border-radius: 10px;
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 3vw;
+                &.work {
+                    border: 2px solid $PrimearyColor;
+                    margin-right: 5vw;
+                }
+
+                &.contact {
+                    border: 2px solid $PrimearyColor;
+                }
+
+                &:hover {
+                    border: 2px solid #b8c6d3;
+                    background-color: #333232;
+                    color: #b8c6d3;
+                    box-shadow: inset 0 0 10px $SecondaryColor;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .Project {
+        max-height: auto;
+        .card {
+            height: auto;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+
+            .desktop {
+                display: none;
+            }
+
+            .mobile {
+                display: initial;
+            }
+
+            img {
+                padding: 10px;
+                width: 180px;
+            }
+
+            .content {
+                padding: 10px 0px 0px 0px;
+
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                .title {
+                    align-self: center;
+                }
+
+                p {
+                    max-width: 100%;
+                    padding: 20px 10px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .About {
+        .content {
+            padding: 2rem;
+
+            span {
+                font-family: inherit;
+                font-size: 1.5rem;
             }
         }
     }
