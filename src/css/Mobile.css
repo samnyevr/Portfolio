@@ -126,6 +126,9 @@
   .About .content .about-card .card li {
     font-size: 1rem;
   }
+  .Contact .content ul a:not(:first-child) {
+    margin-left: 8vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -197,6 +200,7 @@
   .Home {
     padding: 3rem;
     height: auto;
+    background-size: contain;
   }
   .Home .Logo img {
     width: 2.2rem;
@@ -280,12 +284,13 @@
     display: -ms-flexbox;
     display: flex;
     margin-top: 3em;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .About .content .about-card .card {
     font-size: 2em;
+    width: 350px;
   }
   .About .content .about-card .card ul {
     font-family: inherit;
@@ -296,6 +301,9 @@
     list-style: none;
     font-size: 1rem;
   }
+  .Contact .content ul a:not(:first-child) {
+    margin-left: 4px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -305,6 +313,7 @@
   .Home {
     padding: 2rem;
     max-height: auto;
+    background-position: center;
   }
   .Home .Logo img {
     width: 2.2rem;
@@ -406,6 +415,19 @@
   .About .content span {
     font-family: inherit;
     font-size: 1.5rem;
+  }
+  .Contact .content ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Contact .content ul a:not(:first-child) {
+    margin-left: 0px;
+    margin-top: 5px;
   }
 }
 /*# sourceMappingURL=mobile.css.map */

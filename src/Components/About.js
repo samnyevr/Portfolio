@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const About = () => {
-    const [toggle, settoggle] = useState([false, false, false]);
+    const [toggle, settoggle] = useState([false, false, false, false]);
 
     return (
         <div className="About" id="about">
@@ -16,8 +16,12 @@ const About = () => {
                 <div className="about-card">
                     <div
                         className="card"
-                        onMouseEnter={() => settoggle([true, false, false])}
-                        onMouseLeave={() => settoggle([false, false, false])}
+                        onMouseEnter={() =>
+                            settoggle([true, false, false, false])
+                        }
+                        onMouseLeave={() =>
+                            settoggle([false, false, false, false])
+                        }
                     >
                         <div className="about-card-title">My Speciality</div>
                         {toggle[0] && (
@@ -30,8 +34,12 @@ const About = () => {
                     </div>
                     <div
                         className="card"
-                        onMouseEnter={() => settoggle([false, true, false])}
-                        onMouseLeave={() => settoggle([false, false, false])}
+                        onMouseEnter={() =>
+                            settoggle([false, true, false, false])
+                        }
+                        onMouseLeave={() =>
+                            settoggle([false, false, false, false])
+                        }
                     >
                         <div className="about-card-title">My beliefs</div>
                         {toggle[1] && (
@@ -44,8 +52,31 @@ const About = () => {
                     </div>
                     <div
                         className="card"
-                        onMouseEnter={() => settoggle([false, false, true])}
-                        onMouseLeave={() => settoggle([false, false, false])}
+                        onMouseEnter={() =>
+                            settoggle([false, false, false, true])
+                        }
+                        onMouseLeave={() =>
+                            settoggle([false, false, false, false])
+                        }
+                    >
+                        <div className="about-card-title">My Skills</div>
+                        {toggle[3] && (
+                            <ul className="about-card-content">
+                                <li>HTML, CSS, Javascipt, SCSS</li>
+                                <li>C, C#, C++, Java</li>
+                                <li>React, Redux</li>
+                                <li>Python</li>
+                            </ul>
+                        )}
+                    </div>
+                    <div
+                        className="card"
+                        onMouseEnter={() =>
+                            settoggle([false, false, true, false])
+                        }
+                        onMouseLeave={() =>
+                            settoggle([false, false, false, false])
+                        }
                     >
                         <div className="about-card-title">My Hobby</div>
                         {toggle[2] && (

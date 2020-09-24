@@ -2,12 +2,13 @@ import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
 import Logo from "../images/Logo 3 slight white.svg";
+import Hero from "../images/Profile/IMG_2338.jpg";
 
 const Home = () => {
     return (
         <div className="Home" id="home">
             <div className="Logo">
-                <img src={Logo} alt="" />
+                <img src={Logo} alt="Sam Nye Logo" />
                 <h5>&nbsp;Sam Nye VR</h5>
             </div>
             <div className="desc">
