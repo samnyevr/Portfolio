@@ -15,7 +15,7 @@ const Contact = () => {
                         <li>LinkedIn</li>
                     </a>
                     <a
-                        href="https://github.com/inviswings"
+                        href="https://github.com/samnyevr"
                         target={"_blank"}
                         rel="noopener noreferrer"
                     >
