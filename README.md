@@ -1,1 +1,1 @@
-This is the portfolio of Sam Nye. I am an enthusist of Virtual Reality, and I love design and coding. 
+Hi, my name is Sam and I am an enthusist of Virtual Reality. I also love design and coding, so if you are interested in my works come take a look. 
