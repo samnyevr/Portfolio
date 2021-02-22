@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "../Samuel Nye Resume e.pdf";
+import Resume from "../Sam Nye Front End Resume.pdf";
 
 const Contact = () => {
     return (
