@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.f3fb824e.chunk.css",
-    "main.js": "/static/js/main.34fbc816.chunk.js",
-    "main.js.map": "/static/js/main.34fbc816.chunk.js.map",
+    "main.css": "/static/css/main.62b7237b.chunk.css",
+    "main.js": "/static/js/main.bc597939.chunk.js",
+    "main.js.map": "/static/js/main.bc597939.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.21e5ebb1.js",
     "runtime-main.js.map": "/static/js/runtime-main.21e5ebb1.js.map",
-    "static/js/2.d368fb1c.chunk.js": "/static/js/2.d368fb1c.chunk.js",
-    "static/js/2.d368fb1c.chunk.js.map": "/static/js/2.d368fb1c.chunk.js.map",
+    "static/js/2.48395a9c.chunk.js": "/static/js/2.48395a9c.chunk.js",
+    "static/js/2.48395a9c.chunk.js.map": "/static/js/2.48395a9c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0c7c750103cb04064bf363ff9ee65871.js": "/precache-manifest.0c7c750103cb04064bf363ff9ee65871.js",
+    "precache-manifest.1f35366b1b570cbf9c6c57f969faf2a0.js": "/precache-manifest.1f35366b1b570cbf9c6c57f969faf2a0.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.f3fb824e.chunk.css.map": "/static/css/main.f3fb824e.chunk.css.map",
-    "static/js/2.d368fb1c.chunk.js.LICENSE.txt": "/static/js/2.d368fb1c.chunk.js.LICENSE.txt",
-    "static/media/Main.css": "/static/media/PTT Logo Transparent.9644f998.png",
+    "static/css/main.62b7237b.chunk.css.map": "/static/css/main.62b7237b.chunk.css.map",
+    "static/js/2.48395a9c.chunk.js.LICENSE.txt": "/static/js/2.48395a9c.chunk.js.LICENSE.txt",
+    "static/media/Main.css": "/static/media/Sellshop Logo Transparent.a51567ca.png",
+    "static/media/Autoshop Logo.svg": "/static/media/Autoshop Logo.3bc90b69.svg",
+    "static/media/Autoshop.png": "/static/media/Autoshop.ca9c5d24.png",
     "static/media/CloStat Logo.svg": "/static/media/CloStat Logo.37e11dd9.svg",
     "static/media/CloStat.png": "/static/media/CloStat.5a4281e3.png",
     "static/media/IMG_2338.jpg": "/static/media/IMG_2338.d0bc2d2e.jpg",
@@ -22,13 +24,15 @@
     "static/media/PPT.png": "/static/media/PPT.d50afb11.png",
     "static/media/PTT Logo.png": "/static/media/PTT Logo.deba3889.png",
     "static/media/Sam Nye Front End Resume.pdf": "/static/media/Sam Nye Front End Resume.4f8d7f96.pdf",
+    "static/media/Sellshop Logo.svg": "/static/media/Sellshop Logo.0774f272.svg",
+    "static/media/Sellshop.png": "/static/media/Sellshop.f39f765c.png",
     "static/media/Shoperone Logo.svg": "/static/media/Shoperone Logo.6511a9f9.svg",
     "static/media/Shoperone.png": "/static/media/Shoperone.8e709506.png"
   },
   "entrypoints": [
     "static/js/runtime-main.21e5ebb1.js",
-    "static/js/2.d368fb1c.chunk.js",
-    "static/css/main.f3fb824e.chunk.css",
-    "static/js/main.34fbc816.chunk.js"
+    "static/js/2.48395a9c.chunk.js",
+    "static/css/main.62b7237b.chunk.css",
+    "static/js/main.bc597939.chunk.js"
   ]
 }
