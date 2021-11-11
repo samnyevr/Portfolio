@@ -106,6 +106,32 @@
             }
         }
 
+        &.autoshop {
+            background: linear-gradient(
+                    110.73deg,
+                    rgba(0, 0, 20, 0.31) 0%,
+                    rgba(255, 251, 245, 0.08) 18.71%,
+                    rgba(255, 251, 245, 0.03) 74.04%,
+                    rgba(255, 251, 245, 0) 100%
+                ),
+                url("../images/Autoshop/Autoshop Logo Transparent.png") no-repeat;
+            background-size: auto, 500px;
+            background-position: 150% -30%;
+        }
+
+        &.sellshop {
+            background: linear-gradient(
+                    110.73deg,
+                    rgba(0, 0, 20, 0.31) 0%,
+                    rgba(255, 251, 245, 0.08) 18.71%,
+                    rgba(255, 251, 245, 0.03) 74.04%,
+                    rgba(255, 251, 245, 0) 100%
+                ),
+                url("../images/Sellshop/Sellshop Logo Transparent.png") no-repeat;
+            background-size: auto, 500px;
+            background-position: 60% -20%;
+        }
+
         &.clostat {
             background: linear-gradient(
                     110.73deg,

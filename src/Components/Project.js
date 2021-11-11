@@ -1,8 +1,13 @@
 import React from "react";
+import AutoshopIMG from "../images/Autoshop/Autoshop.png";
+import SellshopIMG from "../images/Sellshop/Sellshop.png"
 import CloStatIMG from "../images/CloStat/CloStat.png";
 import MarkItIMG from "../images/MarkIt/Markit.png";
 import PTTIMG from "../images/Paint The Town/PPT.png";
 import ShoperoneIMG from "../images/Shoperone/Shoperone.png";
+
+import AutoshopLogo from "../images/Autoshop/Autoshop Logo.svg";
+import SellshopLogo from "../images/Sellshop/Sellshop Logo.svg";
 import CloStatLogo from "../images/CloStat/CloStat Logo.svg";
 import MarkItLogo from "../images/MarkIt/MarkIt Logo.svg";
 import ShoperoneLogo from "../images/Shoperone/Shoperone Logo.svg";
@@ -13,6 +18,79 @@ const Project = () => {
         <div className="Project" id="project">
             <h1 className="project-title">Project</h1>
 
+            <div className="card autoshop projectlogo">
+                <img
+                    src={AutoshopIMG}
+                    alt={"Autoshop Landing Page"}
+                    className="odd desktop demo"
+                />
+                <img
+                    src={AutoshopLogo}
+                    alt={"Autoshop Logo"}
+                    className="odd mobile demo"
+                />
+                <div className="content odd">
+                    <div className="title">
+                        <h1>Autoshop</h1>
+                        <a
+                            href={"https://github.com/samnyevr/AutoShop"}
+                            target={"_blank"}
+                            rel="noopener noreferrer"
+                        >
+                            <button>Github</button>
+                        </a>
+                        <a
+                            href={"https://practical-lumiere-8a93ea.netlify.app/"}
+                            target={"_blank"}
+                            rel="noopener noreferrer"
+                        >
+                            <button>Website</button>
+                        </a>
+                    </div>
+                    <p>
+                        <em>Autoshop</em> is a single page application for generic autoshop and tire shop templating.
+                        With form submission and content displaying for user engagements.
+                    </p>
+                </div>
+            </div>
+
+            <div className="card sellshop projectlogo">
+                <img
+                    src={SellshopIMG}
+                    alt={"Sellshop Landing Page"}
+                    className="even desktop demo"
+                />
+                <img
+                    src={SellshopLogo}
+                    alt={"Sellshop Logo"}
+                    className="even mobile demo"
+                />
+                <div className="content even">
+                    <div className="title">
+                        <h1>Sellshop</h1>
+                        <a
+                            href={"https://github.com/samnyevr/sellshop-client"}
+                            target={"_blank"}
+                            rel="noopener noreferrer"
+                        >
+                            <button>Github</button>
+                        </a>
+                        <a
+                            href={"https://dazzling-varahamihira-fd5366.netlify.app/"}
+                            target={"_blank"}
+                            rel="noopener noreferrer"
+                        >
+                            <button>Website</button>
+                        </a>
+                    </div>
+                    <p>
+                        <em>Sellshop</em> is a fully functional e-commerce website that can
+                        be used for any scales. This application is aiming for a simplicitc 
+                        way to engage with users so they can quickly browse their items and 
+                        purchase them with ease.
+                    </p>
+                </div>
+            </div>
             <div className="card clostat projectlogo">
                 <img
                     src={CloStatIMG}
