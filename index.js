@@ -56,3 +56,16 @@ window.onload = function() {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  let magic = document.querySelector('.magic');
+  let scene = document.querySelector('.scene');
+  let magicWHalf = magic.clientWidth / 2;
+
+  scene.addEventListener('mousemove', function(e) {
+    let x = e.pageX - this.offsetLeft;
+    let y = e.pageY - this.offsetTop;
+    magic.style.left = `${x - magicWHalf}px`;
+    magic.style.top = `${y - magicWHalf}px`;
+  })
+})
