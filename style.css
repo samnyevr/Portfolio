@@ -72,6 +72,14 @@ h1 {
   font-size: clamp(30px, calc(1.875rem + ((1vw - 7.68px) * 4.4643)), 60px);
 }
 
+h2 {
+  font-size: clamp(26px, calc(1.625rem + ((1vw - 7.68px) * 3.5714)), 50px);
+}
+
+p {
+  font-size: clamp(16px, calc(1rem + ((1vw - 7.68px) * 0.5952)), 20px);
+}
+
 /* Background Color/Font Color */
 
 body {
@@ -79,9 +87,38 @@ body {
   color:#4c1a0a
 }
 
-header {
+header, footer {
   background-color: #eed9c4;
+  padding-block: 20px;
+  z-index: 1;
 }
+
+/* General */
+body {
+  height: 100%;
+}
+
+section {
+  scroll-margin-block-start: 50px;
+}
+
+section h2 {
+  margin-block-end: 20px;
+}
+
+inner-sn h3 {
+  margin-block-end: 20px;
+}
+
+inner-sn ul + h3 {
+  margin-block-start: 20px;
+}
+
+.logo {
+  width: 100%;
+  height: 50px;
+}
+
 
 /* Hero Section*/
 
@@ -98,10 +135,10 @@ header {
 #hero::before {
   content: '';
   position: absolute;
-  width: 500px;
-  height: 400px;
-  right: 400px;
-  bottom: -50px;
+  width: 200px;
+  height: 200px;
+  right: 200px;
+  bottom: 0;
   border: 5px solid rgba(0, 0, 0, 0.5);
   border-radius: 700px 150px 700px 900px;
   border-right: 0;
@@ -110,17 +147,54 @@ header {
 #hero::after {
   content: '';
   position: absolute;
-  width: 500px;
-  height: 400px;
-  right: -100px;
-  bottom: -50px;
+  width: 200px;
+  height: 200px;
+  right: 0;
+  bottom: -0;
   border: 5px solid rgba(0, 0, 0, 0.5);
   border-radius: 150px 700px 900px 700px;
   border-left: 0;
 }
 
+/* Projects Section */
+/* Skills Section */
+:is(#projects, #skills) ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+:is(#projects, #skills) ul li {
+  border: 1px solid grey;
+  border-radius: 20px;
+  min-width: 100%;
+  min-height: 100px;
+  display: grid;
+  place-items: center;
+}
+
+:is(#projects, #skills) ul li:hover {
+  background-color: rgba(0,0,0, .05);
+}
+
+:is(#projects, #skills) ul li a {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+:is(#projects, #skills) .width-full {
+  width: 100%;
+}
+
 /* Media Query */
 @media screen {
+  section {
+    padding-block: 20px;
+  }
+
   inner-sn {
     margin-inline: 20px;
     display: block;
@@ -131,18 +205,23 @@ header {
   }
 
   @media (width > 768px) {
+    .logo {
+      width: 50px;
+    }
+
     inner-sn{
       margin-inline: 40px;
     }
 
     header {
-      padding-block: 20px;
       position: sticky;
       width: 100%;
+      top: 0;
 
       nav {
         display: flex;
         justify-content: space-between;
+        align-items: center;
       }
 
       ul {
@@ -151,9 +230,32 @@ header {
       }
     }
 
+
+    #hero::before {
+      width: 500px;
+      height: 400px;
+      right: 400px;
+      bottom: -50px;
+    }
+
+    #hero::after {
+      width: 500px;
+      height: 400px;
+      right: -100px;
+      bottom: -50px;
+    }
+
     section {
-      min-height: 80%;
       padding-block: 60px;
+    }
+
+    #hero {
+      min-height: 85vh;
+    }
+
+    :is(#projects, #skills) ul li {
+      min-width: calc(100% / 3 - 20px);
+      min-height: 150px;
     }
   }
 
@@ -165,9 +267,36 @@ header {
 
   @media (width > 1440px) {
     inner-sn{
-      max-width: 1024px;
+      max-width: 1380px;
       margin-inline: auto;
     }
   }
   
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+.scene {
+  position: relative;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  margin:auto;
+  width:300px;
+  height: 300px;
+  background: #1d1f20;
+  text-align: center;
+  overflow:hidden;
+}
+.magic {
+  position: relative;
+  z-index: 5;
+  width: 100px;
+  height: 100px;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/hover-reveal.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+  border-radius: 50%;
 }
